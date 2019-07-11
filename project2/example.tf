@@ -16,3 +16,6 @@ resource "aws_instance" "dependent_example" {
 }
 
 resource "null_resource" "example" {}
+
+resource "null_resource" "example-2" {}
+
