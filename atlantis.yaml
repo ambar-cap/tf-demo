@@ -1,0 +1,6 @@
+version: 3
+projects:
+- dir: project1
+  workspace: default
+- dir: project2
+  workspace: defualt
