@@ -4,3 +4,5 @@ projects:
   workspace: default
 - dir: project2
   workspace: default
+- dir: project2
+  workspace: sg
