@@ -14,7 +14,7 @@ terraform {
 }
 
 resource "aws_instance" "example" {
-  count = "${lookup(var.example_count, terraform.workspace, 0)}"
+  count = "${var.example_count[terraform.workspace]}"
   ami           = "ami-09b68f5653871885f"
   instance_type = "t2.micro"
 }
