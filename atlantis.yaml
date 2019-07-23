@@ -12,7 +12,6 @@ workflows:
   custom:
     plan:
       steps:
-      - run: cat /etc/os-release
       - run: echo $PLANFILE
       - run: pwd
       - run: terraform init -no-color
