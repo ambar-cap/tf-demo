@@ -2,5 +2,19 @@ version: 3
 projects:
 - dir: project1
   workspace: default
+  workflow: custom
 - dir: project2
   workspace: default
+- dir: project2
+  workspace: sg
+
+workflows:
+  custom:
+    plan:
+      steps:
+      - run: cat /etc/os-release
+      - run echo $PLANFILE
+      - run: pwd
+      - run: terraform init -no-color
+      - run: terraform workspace select -no-color $WORKSPACE
+      - run: terraform plan -no-color
