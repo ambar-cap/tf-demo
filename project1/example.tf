@@ -24,3 +24,5 @@ resource "aws_instance" "dependent_example" {
   ami           = "ami-09b68f5653871885f"
   instance_type = "t2.micro"
 }
+
+resource "null_resource" "test" {}

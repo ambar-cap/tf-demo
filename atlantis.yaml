@@ -12,9 +12,13 @@ workflows:
   custom:
     plan:
       steps:
-      - run: cat /etc/os-release
       - run: echo $PLANFILE
       - run: pwd
       - run: terraform init -no-color
       - run: terraform workspace select -no-color $WORKSPACE
       - run: terraform plan -no-color
+    apply:
+      steps:
+      - run: terraform init -no-color
+      - run: terraform workspace select -no-color $WORKSPACE
+      - run: terraform apply -no-color
